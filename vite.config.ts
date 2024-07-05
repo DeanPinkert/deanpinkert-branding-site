@@ -14,5 +14,5 @@ export default defineConfig({
               quality: 10,
           },
       })],
-  base: '/dpc/'
+  base: '/deanpinkert-branding-site/'
 })
