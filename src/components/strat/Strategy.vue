@@ -4,7 +4,7 @@ import strategyData from '../../data/strategy.ts'
 </script>
 
 <template>
-  <div class="main">
+  <section class="main">
     <div class="card-container" v-for="article in strategyData" :key="article.id">
       <a :href="article.src" target="_blank">
               <span class="card">
@@ -24,7 +24,7 @@ import strategyData from '../../data/strategy.ts'
       </a>
       <span class="overlay"></span>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

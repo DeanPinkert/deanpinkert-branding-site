@@ -14,7 +14,7 @@ const heroText = [
 </script>
 
 <template>
-  <div class="container__desktop" v-if="props.width > 900">
+  <section class="container__desktop" v-if="props.width > 900">
     <div class="container__left">
       <div class="container__main-branding">
         <div class="container__main-branding-text">
@@ -66,8 +66,8 @@ const heroText = [
       <p>Contact us at <a href="mailto:pinkertconsulting@gmail.com">pinkertconsulting.com</a></p>
       <button @click="open = false">Close</button>
     </div>
-  </div>
-  <div class="container__mobile" v-else>
+  </section>
+  <section class="container__mobile" v-else>
     <div class="container__main-branding">
       <div class="container__main-branding-text">
         <div class="container__left--hero-text-sentence" v-for="word in heroText">
@@ -110,7 +110,7 @@ const heroText = [
       <p>Contact us at <a href="mailto:pinkertconsulting@gmail.com">pinkertconsulting.com</a></p>
       <button @click="open = false">Close</button>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

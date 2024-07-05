@@ -4,7 +4,7 @@ import humanData from '../../data/human.ts'
 </script>
 
 <template>
-  <div class="main" >
+  <section class="main" >
     <div class="gallery">
       <div v-for="(image, idx) in humanData" :class="`gallery-item gallery-item-${idx}`" :key="image.id">
         <div class="bg-img">
@@ -33,7 +33,7 @@ import humanData from '../../data/human.ts'
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

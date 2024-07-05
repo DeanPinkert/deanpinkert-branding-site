@@ -4,7 +4,7 @@ import tradeData from "../../data/trade.ts";
 </script>
 
 <template>
-  <div class="main" >
+  <section class="main" >
     <div class="gallery">
       <div v-for="(image, idx) in tradeData" :class="`gallery-item gallery-item-${idx}`" :key="image.id">
         <div class="bg-img">
@@ -31,7 +31,7 @@ import tradeData from "../../data/trade.ts";
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

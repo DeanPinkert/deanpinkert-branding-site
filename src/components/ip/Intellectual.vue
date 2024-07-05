@@ -28,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main">
+  <section class="main">
     <div class="column-container">
       <div v-for="(image) in ipData" class="column"  :key="image.id">
         <div class="gallery-item"
@@ -51,7 +51,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
