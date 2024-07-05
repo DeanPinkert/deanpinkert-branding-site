@@ -15,7 +15,7 @@ import tradeData from '../src/data/trade.ts'
 import strategyData from '../src/data/strategy.ts'
 import ipData from '../src/data/ip.ts'
 import humanData from '../src/data/human.ts'
-// import {useSeoMeta} from "unhead";
+import {useSeoMeta} from "unhead";
 
 
 
@@ -28,12 +28,12 @@ const scrollHash = ref({}) as any
 const now = new Date()
 const currentYear = now.getFullYear()
 
-// useSeoMeta({
-//   title: `Pinkert Trade and Human Rights Consulting`,
-//   description: 'Pinkert Trade and Human Rights Consulting Company Page',
-//   ogTitle: 'Pinkert Trade and Human Rights Consulting',
-//   ogDescription: 'Pinkert Trade and Human Rights Consulting Company Page'
-// })
+useSeoMeta({
+  title: `Pinkert Trade and Human Rights Consulting`,
+  description: 'Pinkert Trade and Human Rights Consulting Company Page',
+  ogTitle: 'Pinkert Trade and Human Rights Consulting',
+  ogDescription: 'Pinkert Trade and Human Rights Consulting Company Page'
+})
 
 
 const sectionsArray = [tradeData, humanData, strategyData, ipData] as any[]
@@ -126,12 +126,12 @@ onMounted(() => {
         </div>
       </div>
 
-      <div>
+      <nav>
         <button :class="globalState.activeNav === 'trade' ? 'trade' : 'container__app--desktop--navbar-item' " value="trade" @click="handleNavClick">TRADE</button>
         <button :class="globalState.activeNav === 'strategy' ? 'strategy' : 'container__app--desktop--navbar-item' " value="strategy" @click="handleNavClick">AGENCY STRATEGY</button>
         <button :class="globalState.activeNav === 'intellectual' ? 'intellectual' : 'container__app--desktop--navbar-item' " value="intellectual" @click="handleNavClick">INTELLECTUAL PROPERTY</button>
         <button :class="globalState.activeNav === 'human' ? 'human' : 'container__app--desktop--navbar-item' "  value="human" @click="handleNavClick">HUMAN RIGHTS</button>
-      </div>
+      </nav>
 
     </div>
 
@@ -141,9 +141,9 @@ onMounted(() => {
     <Intellectual id="intellectual" ref="intellectual" class="section" :height="height" :width="width" :scrollHash="scrollHash"/>
     <Human id="human" ref="human" class="section" />
 
-    <div class="container__footer--desktop">
+    <footer class="container__footer--desktop">
       <span>Pinkert Trade & Human Rights Consulting &copy; {{ currentYear }}</span>
-    </div>
+    </footer>
 
   </div>
   <div v-else class="container__app--mobile">
@@ -177,9 +177,9 @@ onMounted(() => {
     <div v-if="false" class="contact">
       <button>MAIL</button>
     </div>
-    <div class="container__footer--mobile">
+    <footer class="container__footer--mobile">
       <span>Pinkert Trade & Human Rights Consulting &copy; {{ currentYear }}</span>
-    </div>
+    </footer>
   </div>
 </template>
 
