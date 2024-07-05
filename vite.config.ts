@@ -4,7 +4,8 @@ import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
+    base: '/deanpinkert-branding-site/',
+    plugins: [
       vue(),
       ViteImageOptimizer({
           jpeg: {
@@ -13,6 +14,5 @@ export default defineConfig({
           jpg: {
               quality: 10,
           },
-      })],
-  base: '/deanpinkert-branding-site/'
+      })]
 })
